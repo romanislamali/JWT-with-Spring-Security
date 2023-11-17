@@ -14,5 +14,11 @@ import java.util.List;
 @RequestMapping("/home")
 public class HomeController {
 
+    @Autowired
+    private UserService userService;
+    @GetMapping("/user")
+    public List<User> getUser(){
+        return userService.getUsers();
+    }
 
 }
