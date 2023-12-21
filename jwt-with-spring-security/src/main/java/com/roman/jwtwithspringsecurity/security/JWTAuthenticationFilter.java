@@ -58,7 +58,6 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
             }
 
-
         } else {
             logger.info("Invalid Header Value !! ");
         }
@@ -83,11 +82,9 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
                 logger.info("Validation fails !!");
             }
 
-
         }
 
         filterChain.doFilter(request, response);
-
 
     }
 }
